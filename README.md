@@ -1,4 +1,4 @@
-This application in it's current state was developed to quickly cut down the time needed to complete one of those awful HackerRank Spring Boot technical assessments. 
+This application in its current state was developed to quickly cut down the time needed to complete one of those awful HackerRank Spring Boot technical assessments. 
 Rather than fumbling with a maze of annotations and ampersand soup, I wrote a program that spits out the boilerplate for a working Spring Boot REST application.
 The code passed the default test cases on the first try. 
 
