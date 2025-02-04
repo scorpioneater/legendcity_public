@@ -1,7 +1,8 @@
 #hashp, the hash processor and hash|.
 
 while (<STDIN>){  push(@lines,$_);}
-@tokens;@funcSymbols = ('+','-','*','.+','&');
+@tokens;
+@funcSymbols = ('+','-','*','.+','&');
 sub addition {  my ($x,$y) = @_;  return ($x+$y);}
 sub subtraction {  my ($x,$y) = @_;  return ($x-$y);}
 sub multiplication {  my ($x,$y) = @_;  return ($x*$y);}
@@ -12,9 +13,17 @@ print "Creating function for ${symbol}\n";
 push(@funcSymbols,$symbol);  $customFunctions{$symbol} = @_;}
 
 %functions = (  '+' => \&addition,  '-' => \&subtraction,  '*' => \&multiplication,  '.+' => \&concatenation,  '&' => \&newfunc);
-my $sum = &{$functions{'+'}}(2,2);print "${sum}\n";
+my $sum = &{$functions{'+'}}(2,2);
+print "${sum}\n";
 @containerTokens = ();
-sub Container::new {  my $class = shift;   my $self = {      _name => shift,      _symbol  => shift,      _body => ()   };      my %body = ();   bless $self,$class;   return $self;};sub Container::toString {  my ($self) = @_;  my $name = $self->{_name};  my $symbol = $self->{_symbol};  my $ret = "name:${name} symbol:${symbol} ";  keys %{$self->{_body}};  while(my ($k,$v) = each %{$self->{_body}}){    $ret .= "key:${k} values:";    map {$ret .= "${_},"} @{$v};    $ret .= " ";  }  return $ret;};sub Container::addArgsToBody{   my ($self,$key,$arr) = @_;  $self->{_body}{$key} = $arr;};sub Container::get{  my ($self,$key) = @_;  return @{$self->{_body}{$key}};};
+sub Container::new {  my $class = shift;
+                      my $self = {      _name => shift, 
+                                        _symbol  => shift,      
+                                        _body => ()   };      
+                      my %body = ();   
+    bless $self,$class;   
+return $self;};
+sub Container::toString {  my ($self) = @_;  my $name = $self->{_name};  my $symbol = $self->{_symbol};  my $ret = "name:${name} symbol:${symbol} ";  keys %{$self->{_body}};  while(my ($k,$v) = each %{$self->{_body}}){    $ret .= "key:${k} values:";    map {$ret .= "${_},"} @{$v};    $ret .= " ";  }  return $ret;};sub Container::addArgsToBody{   my ($self,$key,$arr) = @_;  $self->{_body}{$key} = $arr;};sub Container::get{  my ($self,$key) = @_;  return @{$self->{_body}{$key}};};
 my $c = new Container("yyz","-");my @a = (23,75,97);$c->addArgsToBody(0,\@a);print "\n";print $c->toString();print "\n";
 %containers = ();
 $state = "INIT";
