@@ -21,23 +21,27 @@ public class Biff {
           return 1/(1 + Math.pow(Math.E,-1*ln))  
      }
 
-     private static void getNHL() {
+     private void analyzeStandings(){
+          
+     }
+
+     private static void analyzeNHL() {
        
      }
 
-     private static void getNBA() {
+     private static void analyzeNBA() {
        
      }
 
-     private static void getCFB() {
+     private static void analyzeCFB() {
        
      }
 
-     private static void getCBB() {
+     private static void analyzeCBB() {
        
      }
 
-     private static void getIFB() {
+     private static void analyzeIFB() {
        
      }  
 }
