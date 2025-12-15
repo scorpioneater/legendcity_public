@@ -10,9 +10,14 @@ public class Biff {
           
      }
 
-     private float getFbPScore() {
-          float ln = 
-           return 1/(1 + math.pow(math.e,-1*ln))  
+     private float getP(float [12] weights, int [12] stats){
+          float s = 0;
+          int ln = 0;
+          for (stats : int stat){
+              s+=weights[i]*(float)stats[i];
+          }
+      
+          return 1/(1 + math.pow(math.e,-1*ln))  
      }
 
      private static void getNHL() {
