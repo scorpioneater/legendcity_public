@@ -21,7 +21,7 @@ public class Biff {
           return 1/(1 + Math.pow(Math.E,-1*ln))  
      }
 
-     private void analyzeStandings(){
+     private static void analyzeStandings(){
           
      }
 
@@ -44,6 +44,9 @@ public class Biff {
      private static void analyzeIFB() {
        
      }  
+
+
+     class 
 }
 
 /*
