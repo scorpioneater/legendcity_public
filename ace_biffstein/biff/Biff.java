@@ -2,6 +2,7 @@ package com.msc.biff
 
 public class Biff {
 
+     private static final int N_P_FIELDS = 12;
      public static void main (Sting [] args) 
             
      }
@@ -10,14 +11,14 @@ public class Biff {
           
      }
 
-     private float getP(float [12] weights, int [12] stats){
+     private float getP(float [N_P_FIELDS] weights, int [N_P_FIELDS] stats){
           float s = 0;
           int ln = 0;
           for (stats : int stat){
               s+=weights[i]*(float)stats[i];
           }
       
-          return 1/(1 + math.pow(math.e,-1*ln))  
+          return 1/(1 + Math.pow(Math.E,-1*ln))  
      }
 
      private static void getNHL() {
