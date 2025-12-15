@@ -1,19 +1,12 @@
-name: Deploy Java Web App to Azure
+name: Deploy biff application
 
 on:
   [push,pull_request]
 
-# CONFIGURATION
-# For help, go to https://github.com/Azure/Actions
-#
-# 1. Set up the following secrets in your repository:
-#   AZURE_WEBAPP_PUBLISH_PROFILE
-#
-# 2. Change these variables for your configuration:
 env:
-  AZURE_WEBAPP_NAME: JavaSpringPetclinic  # set this to your application's name
+  AZURE_WEBAPP_NAME: biff  # set this to your application's name
   AZURE_WEBAPP_PACKAGE_PATH: ${{ github.workspace }} # set this to the path to your web app project
-  JAVA_VERSION: '1.8'                # set this to the Java version to use
+  JAVA_VERSION: '21'                # set this to the Java version to use
   AZURE_WEBAPP_PUBLISH_PROFILE: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}     # set GH repo secret with the publish profile of the web app
 
 jobs:
