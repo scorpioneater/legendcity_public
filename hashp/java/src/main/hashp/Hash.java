@@ -1,7 +1,5 @@
 package com.sanris.msc.hashp;
 
-import java.math.BigInteger;
-
 public interface Hash {
 
    static long coreMemory = 0;
@@ -15,5 +13,4 @@ public interface Hash {
   public boolean serialize();
   public boolean config();
   public long getCoreMemory();
-  public BigInteger getData(String size);
 }
