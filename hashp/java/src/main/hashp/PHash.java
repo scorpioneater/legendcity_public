@@ -1,9 +1,10 @@
 package com.sanris.msc.hashp;
 
-//import 
-
 public class PHash implements Hash {
 
+  public static void main(String [] args){
+      System.out.println(getData("100");
+  }
   public boolean free() {
      return true;
   }
@@ -30,8 +31,5 @@ public class PHash implements Hash {
   }
   public long getCoreMemory(){
      return true;
-  }
-  public BigInteger getData(String size){
-     return new BigInteger("782369323");
-  }
+  } 
 }
