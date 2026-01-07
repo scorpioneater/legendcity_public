@@ -1,3 +1,17 @@
+hashp - design document
+
+     Copyright Michael Santa Cruz. All rights reserved.
+
+Table of Contents
+
+I.   Why Create a Hash-Based Language? An introduction and the Design Philosphy of hashp
+II.  Memory structure
+III. Keywords and built-in functions
+IV:  Declaring custom functions
+
+
+I. Why Create a Hash-Based Language? An introduction and the Design Philosphy of hashp
+--------------------------------------------------------------------------------------------------------------------------------------------------
 hashp is a functional/hash-based language that can simplify many tasks that require considerable boilerplate in the most commonly used languages. 
 It takes getting used to: there are no free variables (only hash elements), you must create a hash that implements a single function just to do
 basic arithmetic, and hashes were probably not your favorite subject in Data Structure 101.
@@ -38,6 +52,9 @@ of most procedural/OO languages. Drawing from JavaScript, we can use a key rathe
 Notice that while we only made a small cahnge to the code, we altered very little from the first example. This is another design goal of hashp - cut down
 on the amount of code that has to be debugged, rewritten, or thrown away in refactoring efforts. The simplicity of hashp allows most of the scaffolding of
 traditional programs to be folded into the basic syntax of the language.
+
+II.  Memory structure
+--------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
