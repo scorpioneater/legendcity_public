@@ -3,7 +3,7 @@ package com.sanris.msc.hashp;
 public class PHash implements Hash {
 
   public static void main(String [] args){
-      System.out.println(getData("100");
+     
   }
   public boolean free() {
      return true;
