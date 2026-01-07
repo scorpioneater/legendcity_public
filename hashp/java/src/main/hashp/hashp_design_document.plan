@@ -1,1 +1,32 @@
+hashp is a functional/hash-based language that can simplify many tasks that require considerable boilerplate in the most commonly used languages. 
+It takes getting used to: there are no free variables (only hash elements), you must create a hash that implements a single function just to do
+basic arithmetic, and hashes were probably not your favorite subject in Data Structure 101.
+
+However, hashes/maps/dictionaries are extremely useful in professional code. They are just inefficient from a memory-space standpoint, and in 
+worst-case collision scenarios the performance can be O(n) or worse depending on the implementation.
+
+So here is your first taste of hashp:
+
+                >> hw ['Hello World!'] >> std_out
+
+Ah, the famous "Hello World." The code above does what print("Hello World) does in other languages.  But it also does so much more. An explanation
+of the symbols and elements of hashp Hello World:
+
+1. >> functions as "main." It designates  that particular line (the PHash definition) as the program entry point.
+2. "hw" is the PHash identifier, in this case short for "Hello World." The initial design of hashp will use 2 character identifiers, but this will 
+be expaneded as the compiler/interpreter matures.
+3. Square brackets mark the PHash body and all its child elements. 
+4. 'Hello World' is enclosed in single quotes like a literal in other languaes. Sorry, in hashp there are no double quotes. Why do you really need 
+    them if you are not manipulating bytes?
+5. ">>" after the brackets directs the execution output to standard out.
+6. std_out is the keyword for standard output. Notice that *nix conventions are used - capital letters are not allowed in identifier and keyword names. 
+
+So you may be asking, "So when does it actually print anything?" The major goal of designing this language was to move as far away from the
+procedural/limited OO paradigm that the top 5 languages inindustry use. Let's practice thinking in hashp, and thinking in hashes only. Let's add another 
+line to the code above:
+
+                   a ['Hasta Luego Mundo']
+                >> hw [a(0)] >> std_out
+
+
 
