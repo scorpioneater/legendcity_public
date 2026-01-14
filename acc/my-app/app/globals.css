@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: rgb(57, 66, 58);
+  color: rgb(237, 237, 237);
+  font-family: Arial, Helvetica, sans-serif;
+  align-self: center;
+  text-align: justify;
+  width: 77%;
+}
+
+h1 {
+   font-size: xx-large;
+   font-family: Arial, Helvetica, sans-serif;
+   text-decoration-style: wavy;
+   text-decoration: double;
+   text-transform: uppercase;
+   text-shadow: #171717;
+   text-rendering: geometricPrecision;
+   text-orientation: upright;
+}
+
+h2 {
+  font-size: x-large;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   ;
+}
+
+h3 {
+  font-size: x-large;
+   font-family: Arial, Helvetica, sans-serif;
+   text-align: left;
+}
+
+p {
+  font-size: medium;
+   font-family:'Courier New', Courier, monospace;
+   font-style: normal;
+   font-weight: lighter;
+   font-kerning: auto;
+   font-size: 14px;
+   text-align:justify;
+   text-wrap: var(--foreground);
+   text-overflow: clip;
+   text-box-edge: var(--background);
+   text-decoration:wavy;
+   text-indent: 10%;
+   
+}
+
+a {
+   color: #ed7fbf;
+}
+
+      .flex-container {
+        display: flex;
+        align-items: center; /* Use another value to see the result */
+        width: 100%;
+        height: 200px;
+        background-color: #1faadb;
+      }
+      .flex-container > div {
+        width: 25%;
+        height: 60px;
+        margin: 5px;
+        border-radius: 3px;
+        background-color: #8ebf42;
+      }
+
+      .hide {
+  display: none;
+  align-content: center;
+}
+
+.myDIV:hover + .hide {
+  display:flex;
+  color: rgb(228, 182, 182);
+}
+

@@ -1,6 +1,8 @@
 package com.sanris.msc.hashp;
 
-public class PHash implements Hash {
+import com.sanris.msc.hashp.Hash;
+
+public class PHash implements com.sanris.msc.hashp.Hash {
 
   public static void main(String [] args){
      
@@ -30,6 +32,6 @@ public class PHash implements Hash {
      return true;
   }
   public long getCoreMemory(){
-     return true;
+     return 0;
   } 
 }

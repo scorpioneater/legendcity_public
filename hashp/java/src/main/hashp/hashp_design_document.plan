@@ -5,7 +5,7 @@ hashp - design document
 Table of Contents
 
 I.   Why Create a Hash-Based Language? An introduction and the Design Philosphy of hashp
-II.  Memory structure
+II.  Perl, Python, Javascript, Clojure: Why the "100 Year" Languages Failed 
 III. Keywords and built-in functions
 IV:  Declaring custom functions
 
@@ -53,9 +53,50 @@ Notice that while we only made a small cahnge to the code, we altered very littl
 on the amount of code that has to be debugged, rewritten, or thrown away in refactoring efforts. The simplicity of hashp allows most of the scaffolding of
 traditional programs to be folded into the basic syntax of the language.
 
-II.  Memory structure
+II.  Perl, Python, Javascript, Clojure: Why the "100 Year" Languages Failed 
+
+Y Combinator founder, Venture Capitalist, and Lisp hacker Paul Graham's essay "The Hundred-Year 
+Language" is one of the best speculative pieces about the evolution of
+languages in the 21st century and where they are going from C, C++, and
+Java:
+
+https://paulgraham.com/hundred.html
+
+The TLDR version of this wonderful essay is that the languages gaining use 
+and popularity in industry in 2025 are converging on the core principles of
+List:
+
+Interpteted
+Functional
+
+
+Perl:
+
+Python:
+
+Javascript:
+
+Let's Pick on PHP While We're At It:
+
+III.  Memory structure
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
+Hashp is derived from languages that live using the stack/heap construct. In both C/C++ and Java, the stack and heap are separate areas of RAM in which the program's dynamic memory is allocated. The stack contains function calls and all local variables, and a "stack frame" only exists for the duration of a method call. Memory on the heap, however, is for objects created at runtime. Garbage collection and manual delation are the accepted methods for cleaning the heap.
 
+It is important to note that the stack grows forward in terms of memory addresses, while the heap grows backwards.
 
-
+-------------------------------|            |
+|0x00| Stack                   |            |
+|0x10|                         |            |
+|0x20|                         |            |
+|0x30|                         |            V
+|0x40|                         |
+|0x50|                         |  Direction of allocation relative to memory address
+|------------------------------|
+|0x60| Heap                    |            ^
+|0x70|                         |            |
+|0x80|                         |            |
+|0x90|                         |            |
+|0xA0|                         |            |
+|0xB0|                         |
+|------------------------------|
